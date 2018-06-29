@@ -1,0 +1,6 @@
+name: Giphy Field
+description: Creates a field connected to Giphy.
+package: Custom
+
+type: module
+core: 8.x

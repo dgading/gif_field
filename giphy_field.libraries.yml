@@ -1,0 +1,4 @@
+giphy-preview:
+  version: 1.x
+  js:
+    js/giphy-preview.js: {}

@@ -1,0 +1,6 @@
+giphy.autocomplete:
+  path: '/giphy/autocomplete'
+  defaults:
+    _controller: '\Drupal\giphy_field\Controller\GiphyAutocompleteController::autocomplete'
+  requirements:
+    _permission: 'administer content types'
