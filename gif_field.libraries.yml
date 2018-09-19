@@ -1,0 +1,4 @@
+gif-preview:
+  version: 1.x
+  js:
+    js/gif-preview.js: {}

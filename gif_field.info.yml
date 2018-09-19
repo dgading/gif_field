@@ -1,0 +1,6 @@
+name: Gif Field
+description: Creates a field connected to a Gif API.
+package: Custom
+
+type: module
+core: 8.x

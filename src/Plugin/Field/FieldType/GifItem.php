@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\giphy_field\Plugin\Field\FieldType;
+namespace Drupal\gif_field\Plugin\Field\FieldType;
 
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
@@ -17,7 +17,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   default_widget = "giphy_widget",
  * )
  */
-class GiphyItem extends FieldItemBase {
+class GifItem extends FieldItemBase {
 
   /**
    * {@inheritdoc}

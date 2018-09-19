@@ -1,0 +1,6 @@
+gif.autocomplete:
+  path: '/gif_field/autocomplete'
+  defaults:
+    _controller: '\Drupal\gif_field\Controller\GifAutocompleteController::autocomplete'
+  requirements:
+    _permission: 'administer content types'

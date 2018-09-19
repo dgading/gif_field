@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\giphy_field\Plugin\Field\FieldFormatter;
+namespace Drupal\gif_field\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
@@ -17,7 +17,7 @@ use Drupal\Core\Field\FieldItemListInterface;
  *   }
  * )
  */
-class GiphyDefaultFormatter extends FormatterBase {
+class GifDefaultFormatter extends FormatterBase {
 
   /**
    * {@inheritdoc}

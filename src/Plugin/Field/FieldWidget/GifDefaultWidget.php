@@ -1,23 +1,23 @@
 <?php
 
-namespace Drupal\giphy_field\Plugin\Field\FieldWidget;
+namespace Drupal\gif_field\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Plugin implementation of the 'GiphyDefaultWidget' widget.
+ * Plugin implementation of the 'GifDefaultWidget' widget.
  *
  * @FieldWidget(
- *   id = "giphy_widget",
- *   label = @Translation("Giphy Select"),
+ *   id = "gif_widget",
+ *   label = @Translation("Gif Select"),
  *   field_types = {
- *     "Giphy"
+ *     "Gif"
  *   }
  * )
  */
-class GiphyDefaultWidget extends WidgetBase {
+class GifDefaultWidget extends WidgetBase {
 
   /**
    * {@inheritdoc}
@@ -25,7 +25,7 @@ class GiphyDefaultWidget extends WidgetBase {
   public static function defaultSettings() {
     return [
       'size' => '60',
-      'autocomplete_route_name' => 'giphy.autocomplete',
+      'autocomplete_route_name' => 'gif.autocomplete',
     ];
   }
 
@@ -37,7 +37,7 @@ class GiphyDefaultWidget extends WidgetBase {
 
     $element['preview'] = [
       '#type' => 'inline_template',
-      '#template' => "<div style='height: 200px;'><img style='max-height: 200px; max' class='giphy-preview' src='{{image}}' /></div>",
+      '#template' => "<div style='height: 200px;'><img style='max-height: 200px; max' class='gif-preview' src='{{image}}' /></div>",
       '#context' => [
         'image' => $value,
       ],
@@ -45,7 +45,7 @@ class GiphyDefaultWidget extends WidgetBase {
 
     $element['value'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Giphy API Search'),
+      '#title' => $this->t('Gif API Search'),
       '#default_value' => $value,
       '#autocomplete_route_name' => $this->getSetting('autocomplete_route_name'),
       '#autocomplete_route_parameters' => [],
@@ -53,7 +53,7 @@ class GiphyDefaultWidget extends WidgetBase {
       '#maxlength' => 255,
       '#attached' => [
         'library' => [
-          'giphy_field/giphy-preview',
+          'gif_field/gif-preview',
         ],
       ],
     ];
