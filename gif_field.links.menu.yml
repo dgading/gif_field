@@ -1,0 +1,6 @@
+gif_field.admin_settings.form:
+  title: 'Gif Field Configuration'
+  route_name: gif_field.admin_settings_form
+  description: 'Gif Field Admin'
+  parent: system.admin_config_content
+  weight: 99

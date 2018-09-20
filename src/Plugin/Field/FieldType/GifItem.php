@@ -7,14 +7,14 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\TypedData\DataDefinition;
 
 /**
- * Plugin implementation of the 'giphy' field type.
+ * Plugin implementation of the 'gif' field type.
  *
  * @FieldType(
- *   id = "giphy",
- *   label = @Translation("Giphy"),
- *   description = @Translation("Creates a Giphy API field."),
- *   default_formatter = "giphy_formatter",
- *   default_widget = "giphy_widget",
+ *   id = "gif",
+ *   label = @Translation("Gif"),
+ *   description = @Translation("Creates a Gif API field."),
+ *   default_formatter = "gif_formatter",
+ *   default_widget = "gif_widget",
  * )
  */
 class GifItem extends FieldItemBase {

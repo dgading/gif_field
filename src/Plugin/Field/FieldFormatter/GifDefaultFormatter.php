@@ -6,14 +6,14 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
 
 /**
- * Plugin implementation of the 'GiphyDefaultFormatter' formatter.
+ * Plugin implementation of the 'GifDefaultFormatter' formatter.
  *
  * @FieldFormatter(
- *   id = "giphy_formatter",
- *   module = "giphy_field",
- *   label = @Translation("Giphy Field"),
+ *   id = "gif_formatter",
+ *   module = "gif_field",
+ *   label = @Translation("Gif Field"),
  *   field_types = {
- *     "giphy"
+ *     "gif"
  *   }
  * )
  */
