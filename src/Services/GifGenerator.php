@@ -3,6 +3,8 @@
 namespace Drupal\gif_field\Services;
 
 use GuzzleHttp\ClientInterface;
+use Drupal\Core\Site\Settings;
+use Drupal\Core\Config\ConfigFactoryInterface;
 
 /**
  * Returns API response from Gif Service.
@@ -18,8 +20,14 @@ class GifGenerator {
   /**
    * {@inheritdoc}
    */
-  public function __construct(ClientInterface $http_client) {
+  public function __construct(
+    ClientInterface $http_client,
+    Settings $settings,
+    ConfigFactoryInterface $config_factory
+    ) {
     $this->httpClient = $http_client;
+    $this->localSettings = $settings;
+    $this->configFactory = $config_factory;
   }
 
   /**
@@ -66,6 +74,24 @@ class GifGenerator {
     }
 
     return $matches;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setApiKey() {
+    $settings_key = $this->localSettings->get('gif_api_key');
+    $config_key = $this->configFactory->get('gif_field.settings')->get('api_key');
+
+    if ($settings_key) {
+      return $settings_key;
+    }
+    else if ($config_key) {
+      return $config_key;
+    }
+    else {
+      return NULL;
+    }
   }
 
 }

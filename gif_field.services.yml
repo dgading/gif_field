@@ -1,4 +1,4 @@
 services:
   gif_field.get_generator:
     class: Drupal\gif_field\Services\GifGenerator
-    arguments: ['@http_client']
+    arguments: ['@http_client', '@settings', '@config.factory']

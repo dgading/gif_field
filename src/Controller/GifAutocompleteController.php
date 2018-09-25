@@ -92,7 +92,7 @@ class GifAutocompleteController extends ControllerBase {
    * [['value' => 'label'], ['value' => 'label'], ...]
    */
   public function autocomplete(Request $request) {
-    $query = $request->getQueryString();
+    //$query = $request->getQueryString(); Processing using form state
     $api_key = self::setApiKey();
 
     if ($api_key === NULL) {
@@ -100,7 +100,6 @@ class GifAutocompleteController extends ControllerBase {
       $this->messenger->addError('No API key found in settings.php or in configuration.');
       return new JsonResponse('');
     }
-
 
     $gif_service = 'giphy';
     $key = $this->configFactory->get('api_key');
@@ -111,19 +110,6 @@ class GifAutocompleteController extends ControllerBase {
     }
   }
 
-  private function setApiKey() {
-    $settings_key = $this->localSettings->get('gif_api_key');
-    $config_key = $this->configFactory->get('api_key');
-
-    if ($settings_key) {
-      return $settings_key;
-    }
-    else if ($config_key) {
-      return $config_key;
-    }
-    else {
-      return NULL;
-    }
-  }
+  
 
 }
